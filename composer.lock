@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "3158b6960d1a5d9a3fada3dc8743a001",
+    "packages": [
+        {
+            "name": "accolon/redis",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jvrcavalcanti/Redis.git",
+                "reference": "731cf9208e24f609129262d4bd91695454c29b9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jvrcavalcanti/Redis/zipball/731cf9208e24f609129262d4bd91695454c29b9c",
+                "reference": "731cf9208e24f609129262d4bd91695454c29b9c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Accolon\\Redis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "library manage redis with php",
+            "support": {
+                "issues": "https://github.com/jvrcavalcanti/Redis/issues",
+                "source": "https://github.com/jvrcavalcanti/Redis/tree/0.2.0"
+            },
+            "time": "2020-11-22T00:23:07+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
