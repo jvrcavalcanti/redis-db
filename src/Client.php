@@ -51,7 +51,7 @@ class Client
 
     public function updateOne(string $id, array $data)
     {
-        $record = $this->findById($id);
+        $record = $this->find($id);
 
         foreach ($data as $key => $value) {
             $record->$key = $value;
@@ -68,8 +68,16 @@ class Client
         return Redis::del("{$this->tableName}:{$id}");
     }
 
-    public function findById(string $id)
+    public function find(string $id)
     {
         return json_decode(Redis::get("{$this->tableName}:{$id}"));
+    }
+
+    public function all()
+    {
+        return array_map(
+            fn($key) => $this->find(explode(":", $key)[1]),
+            Redis::getKeys("{$this->tableName}:*")
+        );
     }
 }

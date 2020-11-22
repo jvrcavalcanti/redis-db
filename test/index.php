@@ -15,8 +15,10 @@ $client->updateOne($id, [
     'key' => 'one'
 ]);
 
-var_dump($client->findById($id));
+var_dump($client->find($id));
 
 $client->deleteOne($id);
 
-var_dump($client->findById($id));
+var_dump($client->find($id));
+
+var_dump(count($client->all()));
